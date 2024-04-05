@@ -88,7 +88,7 @@ function App() {
         <Accordion.Header onClick={GetBooks}>
         <span class="badge text-bg-success p-3 me-2">GET</span><h1>/api/books/</h1>
         </Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body style={{overflow:"overlay"}}>
         {jsonResult.map((libro)=>{
               return(<div>{JSON.stringify(libro)}</div>)
           })}
@@ -98,7 +98,7 @@ function App() {
         <Accordion.Header>
         <span class="badge text-bg-success p-3 me-2">GET</span><h1>/api/books/:id</h1>
         </Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body style={{overflow:"overlay"}}>
         <InputGroup className="mb-3">
         <Form.Control value={bookId} onChange={e=> SetBookId(e.target.value)}
           placeholder="Ingrese id"
@@ -112,7 +112,7 @@ function App() {
       </Accordion.Item>
       <Accordion.Item eventKey="2">
         <Accordion.Header><span class="badge text-bg-primary p-3 me-2">POST</span><h1>/api/books/</h1></Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body style={{overflow:"overlay"}}>
         <InputGroup className="mb-3">
         <Form.Control value={newBook.title} onChange={e=> SetnewBook({...newBook,title: e.target.value})}
           placeholder="Ingrese titulo"
@@ -135,7 +135,7 @@ function App() {
         <Accordion.Header>
         <span class="badge text-bg-danger p-3 me-2">DELETE</span><h1>/api/books/:id</h1>
         </Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body style={{overflow:"overlay"}}>
         <InputGroup className="mb-3">
         <Form.Control value={bookId} onChange={e=> SetBookId(e.target.value)}
           placeholder="Ingrese id"
