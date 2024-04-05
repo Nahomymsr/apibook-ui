@@ -147,6 +147,9 @@ function App() {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+    <div>
+      <h1 style={{fontSize:"small"}}>Nota: Alojé la API en un servidor gratis, por lo tanto. tarda aprox 50seg en realizar la primera peticion</h1>
+    </div>
     </div>
     </div>
   );
